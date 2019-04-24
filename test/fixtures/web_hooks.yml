@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  url: MyText
+  method: MyString
+  model_type: MyString
+  event_type: MyString
+  auth_type: MyString
+  auth_params: MyText
+  default_params: MyText
+
+two:
+  url: MyText
+  method: MyString
+  model_type: MyString
+  event_type: MyString
+  auth_type: MyString
+  auth_params: MyText
+  default_params: MyText

@@ -1,8 +1,5 @@
-require 'concerns/web_hook_concern'
 
 class WebHooksController < ApplicationController
-
-  include WebHookConcern
 
   before_action :set_model, only: [:show, :update, :destroy]
 

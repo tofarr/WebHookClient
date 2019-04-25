@@ -1,3 +1,5 @@
+If you have puma connect to itself it will lock.
+
 # WebHookClient
 Short description and motivation.
 

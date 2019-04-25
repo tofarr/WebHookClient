@@ -1,3 +1,5 @@
+require 'concerns/web_hook_concern'
+
 class WebHooksController < ApplicationController
 
   include WebHookConcern

@@ -10,13 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_24_223728) do
+ActiveRecord::Schema.define(version: 2019_04_25_151026) do
+
+  create_table "doohickeys", force: :cascade do |t|
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "web_hooks", force: :cascade do |t|
     t.text "url", null: false
     t.string "method", limit: 10, null: false
     t.string "model_type", limit: 50, null: false
-    t.string "event_type", limit: 10, null: false
+    t.string "event_type", limit: 50, null: false
     t.string "auth_type", limit: 10, default: "none", null: false
     t.text "auth_params"
     t.text "default_params"

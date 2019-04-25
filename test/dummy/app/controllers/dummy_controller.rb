@@ -1,5 +1,7 @@
 class DummyController < ApplicationController
 
+  skip_before_action :verify_authenticity_token
+
   # GET /dummy
   # POST /dummy
   # PUT /dummy

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Doohickeys</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @doohickeys.each do |doohickey| %>
+      <tr>
+        <td><%= doohickey.title %></td>
+        <td><%= link_to 'Show', doohickey %></td>
+        <td><%= link_to 'Edit', edit_doohickey_path(doohickey) %></td>
+        <td><%= link_to 'Destroy', doohickey, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New doohickey', new_doohickey_path %>

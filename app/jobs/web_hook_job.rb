@@ -6,7 +6,7 @@ class WebHookJob < ApplicationJob
   def perform(web_hook_id, model)
     webhook = WebHook.find_by_id(web_hook_id)
     return unless webhook #maybe deleted...
-    webhook.exec(model)
+    webhook.run(model)
   end
 
 end

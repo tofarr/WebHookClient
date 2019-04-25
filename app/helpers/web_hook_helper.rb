@@ -17,10 +17,10 @@ module WebHookHelper
   end
 
   module ClassMethods
-    def add_web_hook(action_name, model_name=:model, run_later=true)
-      after_action Proc.new {|n|
-        run_hooks(action_name, model_name, run_later)
-      }, only: [action_name]
+    def add_web_hook(action=nil, model_name=:model, run_later=true)
+      params = {}
+      params[:only] = action if action.present?
+      after_action Proc.new {|n| run_hooks(action_name, model_name, run_later) }, params
     end
   end
 
